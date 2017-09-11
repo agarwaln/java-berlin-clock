@@ -17,7 +17,7 @@ public class BerlinClockUtil {
         return clockRows;
     }
 
-    public static void litLampsInaRowAndUpdateInBerlinClock(int noOfLampsToLit, int rowNumber, LampColor lampColor) {
+    public static void litLampsInaRowOfBerlinClock(int noOfLampsToLit, int rowNumber, LampColor lampColor) {
         String lampsInaRow = clockRows.get(rowNumber-1);
         for(int i = 0 ; i < noOfLampsToLit ; i++){
             lampsInaRow = changeLampColor(lampsInaRow, i, lampColor);

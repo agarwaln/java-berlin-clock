@@ -12,6 +12,10 @@ public class BerlinClockTestBuilder {
         berlinClock = new LinkedList<>();
     }
 
+    public List<String> getBerlinClock() {
+        return berlinClock;
+    }
+
     public BerlinClockTestBuilder with(String lamps){
         berlinClock.add(lamps);
         return this;

@@ -24,14 +24,14 @@ public class TimeConverterImpl implements TimeConverter{
 
         BerlinClockUtil.setClockWithDefaultLamps(new BerlinClock().getDefaultClock());
 
-        BerlinClockUtil.litLampsInaRowAndUpdateInBerlinClock(checkAndGetWhetherToLitLampInSecondsRow(seconds), 1, LampColor.YELLOW);
-        BerlinClockUtil.litLampsInaRowAndUpdateInBerlinClock(hrs/5, 2, LampColor.RED);
-        BerlinClockUtil.litLampsInaRowAndUpdateInBerlinClock(hrs % 5, 3, LampColor.RED);
-        BerlinClockUtil.litLampsInaRowAndUpdateInBerlinClock(minutes/5, 4, LampColor.YELLOW);
-        BerlinClockUtil.litLampsInaRowAndUpdateInBerlinClock(minutes % 5, 5, LampColor.YELLOW);
+        BerlinClockUtil.litLampsInaRowOfBerlinClock(checkAndGetWhetherToLitLampInSecondsRow(seconds), 1, LampColor.YELLOW);
+        BerlinClockUtil.litLampsInaRowOfBerlinClock(hrs/5, 2, LampColor.RED);
+        BerlinClockUtil.litLampsInaRowOfBerlinClock(hrs % 5, 3, LampColor.RED);
+        BerlinClockUtil.litLampsInaRowOfBerlinClock(minutes/5, 4, LampColor.YELLOW);
+        BerlinClockUtil.litLampsInaRowOfBerlinClock(minutes % 5, 5, LampColor.YELLOW);
 
         String berlinClockTimeStr = BerlinClockUtil.getBerlinClockTimeInStringFormat(BerlinClockUtil.getClockWithLampsUpdatedEquivalentToTime());
-        logger.info(String.format("Conversion completed!! Berlin clock time equaivalent to [%s] is [%s]",aTime, berlinClockTimeStr));
+        logger.info(String.format("Conversion completed!! Berlin clock time equivalent to [%s] is [%s]",aTime, berlinClockTimeStr));
 
         return berlinClockTimeStr;
 
